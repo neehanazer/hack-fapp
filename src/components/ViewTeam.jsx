@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import NavBar from "./NavBar";
+import NavBar from "./NavBar";
 
 const ViewTeam = () => {
   const [teams, setTeams] = useState([]);
@@ -18,7 +18,7 @@ const ViewTeam = () => {
 
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
 
       <div className="container" style={{ padding: 10, margin: "50px auto" }}>
         <h1 style={{ marginBottom: 30 }}>View Hackathon Teams</h1>
