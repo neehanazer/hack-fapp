@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-// import NavBar from "./NavBar";
+import NavBar from "./NavBar";
 
 const AddTeam = () => {
   const [data, setData] = React.useState({
@@ -55,7 +55,7 @@ const AddTeam = () => {
 
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
 
       <div className="container" style={{ padding: 10, margin: 50 }}>
         <h2 style={{ marginBottom: 40 }}>Add Hackathon Team</h2>
@@ -170,18 +170,17 @@ const AddTeam = () => {
             />
           </div>
 
-          <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-<label htmlFor="" className="form-label">Technology Stack</label>
-<select  id="" className="form-control" name="tech_stack" value={data.technostack } onChange={handleChange
-    
-}>
-    <option value="React.js" className="options">React.js</option>
-    <option value="Node.js" className="options">Node.js</option>
-    <option value="Flutter" className="options">Flutter</option>
-    <option value="Python-Django" className="options">Python-Django</option>
-</select>
-        </div>
+          <div className="col-md-6">
+            <label className="form-label">Technology Stack</label>
+            <input
+              type="text"
+              className="form-control"
+              name="technostack"
+              value={data.technostack}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
           <div className="col-md-6">
             <label className="form-label">Mentor Name</label>
